@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — HexaLexique</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
+    h3 { font-size: 1rem; margin-top: 1.2rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: #f5f5f5; }
+    code { background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.25rem; }
+    .contact { background: #f9f9f9; border-left: 3px solid #ccc; padding: 1rem 1.25rem; margin: 1rem 0; }
+    a { color: #0066cc; }
+  </style>
+</head>
+<body>
+
+<h1>Politique de confidentialité — HexaLexique</h1>
+<p class="meta">Version 1.0 · Bêta fermée · 2026-06-29<br>
+Package Android : <code>com.olasserre.hexalexique</code></p>
+
+<h2>1. Préambule</h2>
+<p>HexaLexique est un jeu de mots roguelite pour Android, distribué en bêta fermée sur Google Play.</p>
+<p><strong>Éditeur :</strong> Olivier Lasserre<br>
+<strong>Contact :</strong> <a href="mailto:o.lasserre@gmail.com">o.lasserre@gmail.com</a><br>
+<strong>Version :</strong> 0.1.0 (bêta fermée)</p>
+<p>Cette politique de confidentialité décrit précisément quelles données HexaLexique traite, où elles sont stockées, et ce qui n'est pas collecté.</p>
+
+<h2>2. Principe fondamental — Offline-first</h2>
+<p>HexaLexique est conçu pour fonctionner entièrement hors ligne. <strong>Aucune donnée personnelle n'est transmise à un serveur externe.</strong> Il n'existe aucun backend, aucun serveur d'analyse, aucune base de données distante associée à cette application.</p>
+
+<h2>3. Données traitées localement sur votre appareil</h2>
+<p>Les informations suivantes sont stockées localement sur votre appareil via AsyncStorage (stockage clé-valeur local d'Android), uniquement pour assurer le fonctionnement du jeu :</p>
+
+<h3>3.1 Préférences utilisateur</h3>
+<ul>
+  <li>Activation ou désactivation des sons SFX (clic de tuile, confirmation de mot)</li>
+  <li>Activation ou désactivation de la musique ambiante</li>
+  <li>Activation ou désactivation des vibrations (haptique)</li>
+</ul>
+<p>Ces préférences ne sont pas transmises hors de l'appareil.</p>
+
+<h3>3.2 Sauvegarde de run</h3>
+<ul>
+  <li>État de la partie en cours (plateau, reliques actives, étage, score)</li>
+  <li>Style de départ sélectionné (Le Poète, L'Architecte, Le Collectionneur)</li>
+  <li>Graine RNG (seed) de la run en cours</li>
+</ul>
+<p>Ces données permettent de reprendre une partie interrompue. Elles restent locales et sont supprimées à la désinstallation ou à la réinitialisation de l'application.</p>
+
+<h3>3.3 Métriques locales</h3>
+<ul>
+  <li>Record d'étage atteint (<code>highestStageReached</code>) affiché sur l'écran d'accueil</li>
+</ul>
+<p>Cette valeur est locale, non partagée, non transmise.</p>
+
+<h3>3.4 Export diagnostic volontaire</h3>
+<p>L'application peut permettre à l'utilisateur d'exporter un fichier JSON de diagnostic. Cet export est une action volontaire de l'utilisateur. Le fichier est produit localement et transmis uniquement si l'utilisateur choisit de le partager manuellement (par e-mail ou autre). HexaLexique n'initie aucun envoi automatique de ce fichier.</p>
+
+<h2>4. Données NON collectées</h2>
+<p>HexaLexique ne collecte, ne transmet et ne stocke hors de l'appareil aucune des données suivantes :</p>
+<ul>
+  <li>Nom, prénom, adresse e-mail ou tout identifiant personnel</li>
+  <li>Localisation géographique</li>
+  <li>Identifiant publicitaire (Google Advertising ID)</li>
+  <li>Données de navigation ou de comportement transmises à des tiers</li>
+  <li>Données de crash transmises automatiquement (aucun SDK de crash reporting dans ce build)</li>
+  <li>Données biométriques</li>
+  <li>Contacts, SMS, appels téléphoniques</li>
+  <li>Photos ou fichiers de l'appareil</li>
+</ul>
+
+<h2>5. Microphone — Absence confirmée</h2>
+<p>La permission <code>RECORD_AUDIO</code> est <strong>absente</strong> du manifest de cette application. HexaLexique utilise <code>expo-audio</code> pour la lecture audio uniquement (sons SFX et musique ambiante). L'accès au microphone n'est pas requis, pas demandé et pas utilisé.</p>
+
+<h2>6. Publicité</h2>
+<p>HexaLexique ne contient <strong>aucune publicité réelle</strong> dans cette version bêta. Aucun identifiant publicitaire n'est collecté.</p>
+
+<h2>7. Achats intégrés</h2>
+<p>Il n'existe <strong>aucun achat intégré</strong> dans cette version. HexaLexique est entièrement gratuit pour les testeurs de la bêta fermée.</p>
+
+<h2>8. Services tiers</h2>
+<p>HexaLexique n'intègre aucun service tiers collectant des données :</p>
+<ul>
+  <li>Pas de Supabase</li>
+  <li>Pas de Firebase / Google Analytics</li>
+  <li>Pas de Sentry ou SDK de crash reporting</li>
+  <li>Pas de SDK publicitaire actif</li>
+</ul>
+<p>Les dépendances utilisées (Expo SDK ~56, React Native, expo-audio, expo-haptics, @react-native-async-storage/async-storage) traitent des données uniquement en local sur l'appareil.</p>
+
+<h2>9. Permissions Android et justification</h2>
+<table>
+  <tr><th>Permission</th><th>Justification</th></tr>
+  <tr><td><code>INTERNET</code></td><td>Requis par le runtime Expo SDK (usage interne au framework)</td></tr>
+  <tr><td><code>MODIFY_AUDIO_SETTINGS</code></td><td>Lecture audio — sons SFX et musique ambiante (expo-audio)</td></tr>
+  <tr><td><code>READ_EXTERNAL_STORAGE</code> (maxSdkVersion 32)</td><td>Requis par Expo/React Native SDK pour Android ≤ 12</td></tr>
+  <tr><td><code>WRITE_EXTERNAL_STORAGE</code> (maxSdkVersion 32)</td><td>Requis par Expo/React Native SDK pour Android ≤ 12</td></tr>
+  <tr><td><code>VIBRATE</code></td><td>Haptique légère lors des interactions de jeu (expo-haptics)</td></tr>
+</table>
+
+<h2>10. Durée de conservation des données</h2>
+<p>Les données traitées localement (préférences, sauvegarde, record) sont conservées sur l'appareil aussi longtemps que l'application est installée. Elles sont supprimées automatiquement à la désinstallation de l'application.</p>
+
+<h2>11. Suppression des données</h2>
+<p>Pour supprimer toutes les données traitées par HexaLexique :</p>
+<ol>
+  <li><strong>Désinstaller l'application</strong> : toutes les données locales sont effacées.</li>
+  <li><strong>Réinitialiser via les Réglages Android</strong> : Paramètres › Applications › HexaLexique › Stockage › Effacer les données.</li>
+</ol>
+<p>Aucune procédure de suppression distante n'est nécessaire car aucune donnée n'est transmise hors de l'appareil.</p>
+
+<h2>12. Droits des utilisateurs (RGPD)</h2>
+<p>Dans la mesure où HexaLexique ne traite aucune donnée à caractère personnel au sens du RGPD (les données restent locales sur l'appareil de l'utilisateur et ne sont pas transmises à l'éditeur), les droits d'accès, rectification, portabilité et opposition ne s'appliquent pas de façon standard.</p>
+<p>Toute question peut néanmoins être adressée à : <a href="mailto:o.lasserre@gmail.com">o.lasserre@gmail.com</a></p>
+
+<h2>13. Lexique et ressources tiers — Mentions légales</h2>
+
+<h3>Lexique 3.83</h3>
+<ul>
+  <li><strong>Auteurs :</strong> Boris New &amp; Christophe Pallier</li>
+  <li><strong>Source :</strong> <a href="http://www.lexique.org">www.lexique.org</a> — <a href="https://github.com/chrplr/openlexicon">github.com/chrplr/openlexicon</a></li>
+  <li><strong>Licence :</strong> Creative Commons Attribution — Partage dans les mêmes conditions 4.0 International (CC BY-SA 4.0)</li>
+  <li><strong>Usage :</strong> Base lexicale du dictionnaire français filtré utilisé pour la validation des mots</li>
+</ul>
+
+<h3>Playfair Display</h3>
+<ul>
+  <li><strong>Auteur :</strong> Claus Eggers Sørensen</li>
+  <li><strong>Licence :</strong> SIL Open Font License 1.1 (OFL-1.1)</li>
+  <li><strong>Usage :</strong> Police d'affichage utilisée dans l'interface</li>
+</ul>
+
+<h3>Space Mono</h3>
+<ul>
+  <li><strong>Auteur :</strong> Colophon</li>
+  <li><strong>Licence :</strong> SIL Open Font License 1.1 (OFL-1.1)</li>
+  <li><strong>Usage :</strong> Police à chasse fixe utilisée dans l'interface</li>
+</ul>
+
+<h3>Sons SFX</h3>
+<ul>
+  <li><code>tile_appended_v1.wav</code> et <code>word_valid_confirmed_v1.wav</code></li>
+  <li><strong>Licence :</strong> CC0 — domaine public</li>
+  <li><strong>Usage :</strong> Sons de retour lors des interactions de jeu</li>
+</ul>
+
+<h3>Musique ambiante</h3>
+<ul>
+  <li><code>background_music_direction_b_v1.mp3</code> — Yoiyami / OpenGameArt.org (First Light Particles)</li>
+  <li><strong>Licence :</strong> CC0 — domaine public</li>
+  <li><strong>Usage :</strong> Musique de fond optionnelle activable dans les Réglages</li>
+</ul>
+
+<h2>14. Modifications de cette politique</h2>
+<p>En cas de modification des pratiques de données (par exemple en cas d'ajout d'un service analytics ou d'un backend), cette politique sera mise à jour et les testeurs en seront informés par e-mail avant toute distribution mise à jour.</p>
+
+<h2>15. Contact</h2>
+<div class="contact">
+  <strong>Olivier Lasserre</strong><br>
+  <a href="mailto:o.lasserre@gmail.com">o.lasserre@gmail.com</a>
+</div>
+
+</body>
+</html>
