@@ -1,179 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de confidentialité — HexaLexique</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      color: #1a1a1a;
-      line-height: 1.7;
-    }
-    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
-    h3 { font-size: 1rem; margin-top: 1.2rem; }
-    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-    th, td { border: 1px solid #ddd; padding: 0.5rem 0.75rem; text-align: left; }
-    th { background: #f5f5f5; }
-    code { background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
-    ul { padding-left: 1.5rem; }
-    li { margin-bottom: 0.25rem; }
-    .contact { background: #f9f9f9; border-left: 3px solid #ccc; padding: 1rem 1.25rem; margin: 1rem 0; }
-    a { color: #0066cc; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — HexaLexique</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1d1d1f; --bg:#fbfaf7; --muted:#5f5b53; --line:#e4dfd4; --accent:#8a6d1f; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#ece8df; --bg:#0f0f12; --muted:#a39d91; --line:#2a2a30; --accent:#e9c46a; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 1.9rem; line-height:1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+  h3 { font-size: 1rem; margin: 20px 0 6px; }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  a { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  .table-wrap { overflow-x: auto; }
+  .box { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 16px 0; }
+  code { font-size: .9em; }
+</style>
 </head>
 <body>
+<main>
 
 <h1>Politique de confidentialité — HexaLexique</h1>
-<p class="meta">Version 1.0 · Bêta fermée · 2026-06-29<br>
-Package Android : <code>com.olasserre.hexalexique</code></p>
+<p class="meta">Version 2.0 · en vigueur le 27 septembre 2026 · application Android <code>com.olasserre.hexalexique</code><br>
+Remplace la version 1.0 du 29 juin 2026.</p>
 
-<h2>1. Préambule</h2>
-<p>HexaLexique est un jeu de mots roguelite pour Android, distribué en bêta fermée sur Google Play.</p>
-<p><strong>Éditeur :</strong> Olivier Lasserre<br>
-<strong>Contact :</strong> <a href="mailto:o.lasserre@gmail.com">o.lasserre@gmail.com</a><br>
-<strong>Version :</strong> 0.1.0 (bêta fermée)</p>
-<p>Cette politique de confidentialité décrit précisément quelles données HexaLexique traite, où elles sont stockées, et ce qui n'est pas collecté.</p>
-
-<h2>2. Principe fondamental — Offline-first</h2>
-<p>HexaLexique est conçu pour fonctionner entièrement hors ligne. <strong>Aucune donnée personnelle n'est transmise à un serveur externe.</strong> Il n'existe aucun backend, aucun serveur d'analyse, aucune base de données distante associée à cette application.</p>
-
-<h2>3. Données traitées localement sur votre appareil</h2>
-<p>Les informations suivantes sont stockées localement sur votre appareil via AsyncStorage (stockage clé-valeur local d'Android), uniquement pour assurer le fonctionnement du jeu :</p>
-
-<h3>3.1 Préférences utilisateur</h3>
+<div class="box">
+<strong>En bref</strong>
 <ul>
-  <li>Activation ou désactivation des sons SFX (clic de tuile, confirmation de mot)</li>
-  <li>Activation ou désactivation de la musique ambiante</li>
-  <li>Activation ou désactivation des vibrations (haptique)</li>
+  <li>Tu peux jouer <strong>sans compte</strong> : ta progression reste alors sur ton téléphone.</li>
+  <li>Si tu crées un <strong>compte</strong> (connexion avec Google), ton pseudo, tes scores et ta progression sont enregistrés sur nos serveurs, hébergés en France (Paris), pour les classements, le Défi du jour, les amis et la sauvegarde.</li>
+  <li>L'application affiche des <strong>publicités Google AdMob</strong>. Les annonces personnalisées ne sont utilisées qu'avec ton consentement, que tu peux modifier à tout moment.</li>
+  <li>Tu peux <strong>supprimer ton compte et toutes ses données</strong> depuis l'application ou par e-mail (voir <a href="#suppression-du-compte">§ 8</a>).</li>
 </ul>
-<p>Ces préférences ne sont pas transmises hors de l'appareil.</p>
-
-<h3>3.2 Sauvegarde de run</h3>
-<ul>
-  <li>État de la partie en cours (plateau, reliques actives, étage, score)</li>
-  <li>Style de départ sélectionné (Le Poète, L'Architecte, Le Collectionneur)</li>
-  <li>Graine RNG (seed) de la run en cours</li>
-</ul>
-<p>Ces données permettent de reprendre une partie interrompue. Elles restent locales et sont supprimées à la désinstallation ou à la réinitialisation de l'application.</p>
-
-<h3>3.3 Métriques locales</h3>
-<ul>
-  <li>Record d'étage atteint (<code>highestStageReached</code>) affiché sur l'écran d'accueil</li>
-</ul>
-<p>Cette valeur est locale, non partagée, non transmise.</p>
-
-<h3>3.4 Export diagnostic volontaire</h3>
-<p>L'application peut permettre à l'utilisateur d'exporter un fichier JSON de diagnostic. Cet export est une action volontaire de l'utilisateur. Le fichier est produit localement et transmis uniquement si l'utilisateur choisit de le partager manuellement (par e-mail ou autre). HexaLexique n'initie aucun envoi automatique de ce fichier.</p>
-
-<h2>4. Données NON collectées</h2>
-<p>HexaLexique ne collecte, ne transmet et ne stocke hors de l'appareil aucune des données suivantes :</p>
-<ul>
-  <li>Nom, prénom, adresse e-mail ou tout identifiant personnel</li>
-  <li>Localisation géographique</li>
-  <li>Identifiant publicitaire (Google Advertising ID)</li>
-  <li>Données de navigation ou de comportement transmises à des tiers</li>
-  <li>Données de crash transmises automatiquement (aucun SDK de crash reporting dans ce build)</li>
-  <li>Données biométriques</li>
-  <li>Contacts, SMS, appels téléphoniques</li>
-  <li>Photos ou fichiers de l'appareil</li>
-</ul>
-
-<h2>5. Microphone — Absence confirmée</h2>
-<p>La permission <code>RECORD_AUDIO</code> est <strong>absente</strong> du manifest de cette application. HexaLexique utilise <code>expo-audio</code> pour la lecture audio uniquement (sons SFX et musique ambiante). L'accès au microphone n'est pas requis, pas demandé et pas utilisé.</p>
-
-<h2>6. Publicité</h2>
-<p>HexaLexique ne contient <strong>aucune publicité réelle</strong> dans cette version bêta. Aucun identifiant publicitaire n'est collecté.</p>
-
-<h2>7. Achats intégrés</h2>
-<p>Il n'existe <strong>aucun achat intégré</strong> dans cette version. HexaLexique est entièrement gratuit pour les testeurs de la bêta fermée.</p>
-
-<h2>8. Services tiers</h2>
-<p>HexaLexique n'intègre aucun service tiers collectant des données :</p>
-<ul>
-  <li>Pas de Supabase</li>
-  <li>Pas de Firebase / Google Analytics</li>
-  <li>Pas de Sentry ou SDK de crash reporting</li>
-  <li>Pas de SDK publicitaire actif</li>
-</ul>
-<p>Les dépendances utilisées (Expo SDK ~56, React Native, expo-audio, expo-haptics, @react-native-async-storage/async-storage) traitent des données uniquement en local sur l'appareil.</p>
-
-<h2>9. Permissions Android et justification</h2>
-<table>
-  <tr><th>Permission</th><th>Justification</th></tr>
-  <tr><td><code>INTERNET</code></td><td>Requis par le runtime Expo SDK (usage interne au framework)</td></tr>
-  <tr><td><code>MODIFY_AUDIO_SETTINGS</code></td><td>Lecture audio — sons SFX et musique ambiante (expo-audio)</td></tr>
-  <tr><td><code>READ_EXTERNAL_STORAGE</code> (maxSdkVersion 32)</td><td>Requis par Expo/React Native SDK pour Android ≤ 12</td></tr>
-  <tr><td><code>WRITE_EXTERNAL_STORAGE</code> (maxSdkVersion 32)</td><td>Requis par Expo/React Native SDK pour Android ≤ 12</td></tr>
-  <tr><td><code>VIBRATE</code></td><td>Haptique légère lors des interactions de jeu (expo-haptics)</td></tr>
-</table>
-
-<h2>10. Durée de conservation des données</h2>
-<p>Les données traitées localement (préférences, sauvegarde, record) sont conservées sur l'appareil aussi longtemps que l'application est installée. Elles sont supprimées automatiquement à la désinstallation de l'application.</p>
-
-<h2>11. Suppression des données</h2>
-<p>Pour supprimer toutes les données traitées par HexaLexique :</p>
-<ol>
-  <li><strong>Désinstaller l'application</strong> : toutes les données locales sont effacées.</li>
-  <li><strong>Réinitialiser via les Réglages Android</strong> : Paramètres › Applications › HexaLexique › Stockage › Effacer les données.</li>
-</ol>
-<p>Aucune procédure de suppression distante n'est nécessaire car aucune donnée n'est transmise hors de l'appareil.</p>
-
-<h2>12. Droits des utilisateurs (RGPD)</h2>
-<p>Dans la mesure où HexaLexique ne traite aucune donnée à caractère personnel au sens du RGPD (les données restent locales sur l'appareil de l'utilisateur et ne sont pas transmises à l'éditeur), les droits d'accès, rectification, portabilité et opposition ne s'appliquent pas de façon standard.</p>
-<p>Toute question peut néanmoins être adressée à : <a href="mailto:o.lasserre@gmail.com">o.lasserre@gmail.com</a></p>
-
-<h2>13. Lexique et ressources tiers — Mentions légales</h2>
-
-<h3>Lexique 3.83</h3>
-<ul>
-  <li><strong>Auteurs :</strong> Boris New &amp; Christophe Pallier</li>
-  <li><strong>Source :</strong> <a href="http://www.lexique.org">www.lexique.org</a> — <a href="https://github.com/chrplr/openlexicon">github.com/chrplr/openlexicon</a></li>
-  <li><strong>Licence :</strong> Creative Commons Attribution — Partage dans les mêmes conditions 4.0 International (CC BY-SA 4.0)</li>
-  <li><strong>Usage :</strong> Base lexicale du dictionnaire français filtré utilisé pour la validation des mots</li>
-</ul>
-
-<h3>Playfair Display</h3>
-<ul>
-  <li><strong>Auteur :</strong> Claus Eggers Sørensen</li>
-  <li><strong>Licence :</strong> SIL Open Font License 1.1 (OFL-1.1)</li>
-  <li><strong>Usage :</strong> Police d'affichage utilisée dans l'interface</li>
-</ul>
-
-<h3>Space Mono</h3>
-<ul>
-  <li><strong>Auteur :</strong> Colophon</li>
-  <li><strong>Licence :</strong> SIL Open Font License 1.1 (OFL-1.1)</li>
-  <li><strong>Usage :</strong> Police à chasse fixe utilisée dans l'interface</li>
-</ul>
-
-<h3>Sons SFX</h3>
-<ul>
-  <li><code>tile_appended_v1.wav</code> et <code>word_valid_confirmed_v1.wav</code></li>
-  <li><strong>Licence :</strong> CC0 — domaine public</li>
-  <li><strong>Usage :</strong> Sons de retour lors des interactions de jeu</li>
-</ul>
-
-<h3>Musique ambiante</h3>
-<ul>
-  <li><code>background_music_direction_b_v1.mp3</code> — Yoiyami / OpenGameArt.org (First Light Particles)</li>
-  <li><strong>Licence :</strong> CC0 — domaine public</li>
-  <li><strong>Usage :</strong> Musique de fond optionnelle activable dans les Réglages</li>
-</ul>
-
-<h2>14. Modifications de cette politique</h2>
-<p>En cas de modification des pratiques de données (par exemple en cas d'ajout d'un service analytics ou d'un backend), cette politique sera mise à jour et les testeurs en seront informés par e-mail avant toute distribution mise à jour.</p>
-
-<h2>15. Contact</h2>
-<div class="contact">
-  <strong>Olivier Lasserre</strong><br>
-  <a href="mailto:o.lasserre@gmail.com">o.lasserre@gmail.com</a>
 </div>
 
+<h2 id="responsable">1. Qui est responsable de tes données ?</h2>
+<p>HexaLexique est un jeu de mots édité par <strong>Olivier Lasserre</strong>, développeur indépendant (« nous »).<br>
+Contact pour toute question sur tes données : <strong>o.lasserre@gmail.com</strong></p>
+
+<h2 id="sans-compte">2. Jouer sans compte</h2>
+<p>Sans compte, tu joues avec une <strong>identité locale</strong> (un surnom du type « Ano-1234 ») générée sur ton téléphone. Les données suivantes restent <strong>uniquement sur ton appareil</strong> et ne nous sont jamais transmises :</p>
+<ul>
+  <li>tes préférences (musique, sons, vibrations, réduction des animations) ;</li>
+  <li>ta partie en cours, ta progression, tes records et ton historique de parties ;</li>
+  <li>un journal technique local (événements de jeu), qui ne quitte jamais ton téléphone sauf si tu choisis toi-même de l'exporter et de le partager.</li>
+</ul>
+<p>Sans compte, tu peux consulter les classements publics en lecture seule : cette consultation ne transmet aucune donnée te concernant.</p>
+<p>Ces données sont effacées si tu désinstalles l'application ou si tu effaces ses données dans les réglages Android.</p>
+
+<h2 id="compte">3. Données traitées si tu crées un compte</h2>
+<p>La création d'un compte est <strong>facultative</strong>. Elle se fait par <strong>connexion avec Google</strong>.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Données</th><th>Pourquoi</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Données de connexion Google</strong> : adresse e-mail et identifiant de compte ; Google transmet aussi par défaut ton nom et ta photo de profil, conservés par le service d'authentification mais <strong>jamais affichés ni utilisés</strong> par le jeu</td><td>Te connecter et sécuriser ton compte</td></tr>
+    <tr><td><strong>Pseudo</strong> que tu choisis</td><td>T'identifier dans le jeu, les classements et auprès de tes amis (public)</td></tr>
+    <tr><td><strong>Parties vérifiées</strong> : score, mots joués, tracés et étapes de la partie</td><td>Vérifier qu'un score est authentique avant de l'inscrire au classement</td></tr>
+    <tr><td><strong>Classements</strong> : pseudo et meilleur score</td><td>Afficher les classements publics (tu peux choisir de ne pas y apparaître)</td></tr>
+    <tr><td><strong>Progression</strong> : étage atteint, collection de mots, badges</td><td>Sauvegarder et synchroniser ta progression</td></tr>
+    <tr><td><strong>Défi du jour</strong> : participations et réussites</td><td>Faire fonctionner le Défi du jour</td></tr>
+    <tr><td><strong>Amis</strong> : demandes et liste d'amis</td><td>Fonction amis</td></tr>
+    <tr><td><strong>Lexo</strong> (monnaie virtuelle du jeu, sans argent réel) : solde, récompenses, objets obtenus</td><td>Faire fonctionner la boutique virtuelle</td></tr>
+    <tr><td><strong>Réglages de confidentialité</strong> (apparaître au classement, profil visible)</td><td>Respecter tes choix</td></tr>
+    <tr><td><strong>Données techniques</strong> : adresse IP et informations de requête dans les journaux de l'hébergeur</td><td>Sécurité, prévention des abus, bon fonctionnement</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>Base légale</strong> : l'exécution du service que tu demandes en créant un compte (contrat) et notre intérêt légitime à sécuriser le jeu et à garantir des classements équitables.</p>
+<p><strong>Ce qui est public</strong> : ton pseudo et tes scores dans les classements (sauf si tu désactives « Apparaître au classement »), et ton pseudo pour la recherche d'amis (sauf si tu désactives « Profil visible par tous »). Ton adresse e-mail n'est jamais affichée.</p>
+
+<h2 id="publicite">4. Publicité (Google AdMob)</h2>
+<p>HexaLexique est gratuit et affiche des <strong>bannières publicitaires</strong> fournies par <strong>Google AdMob</strong>. Aucune vidéo ni publicité plein écran.</p>
+<ul>
+  <li><strong>Consentement</strong> : au premier lancement dans l'Espace économique européen et au Royaume-Uni, un formulaire de consentement Google (conforme au cadre IAB TCF) te demande si tu acceptes les annonces personnalisées. Tu peux modifier ton choix à tout moment dans <strong>Réglages → Publicité → Gérer mes choix publicitaires</strong>.</li>
+  <li><strong>Données traitées par Google</strong> : identifiant publicitaire de l'appareil, adresse IP (localisation approximative), informations sur l'appareil, interactions avec les annonces, diagnostics techniques.</li>
+  <li><strong>Si tu refuses</strong> : des annonces non personnalisées (ou limitées) sont affichées. Google traite alors quand même certaines données techniques, notamment pour limiter la répétition des annonces, mesurer leur diffusion et lutter contre la fraude.</li>
+  <li><strong>Moins de 15 ans</strong> : en France, le consentement aux annonces personnalisées d'une personne de moins de 15 ans nécessite l'accord d'un titulaire de l'autorité parentale. Si c'est ton cas, refuse les annonces personnalisées ou demande l'accord de tes parents.</li>
+  <li>Tu peux aussi réinitialiser ou supprimer ton identifiant publicitaire dans les réglages Android (<em>Paramètres → Google → Annonces</em>).</li>
+</ul>
+<p>Google agit en tant que responsable de traitement indépendant pour la publicité. Voir les <a href="https://policies.google.com/privacy" rel="noopener">règles de confidentialité de Google</a> et <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">comment Google utilise les données des applications partenaires</a>.</p>
+
+<h2 id="prestataires">5. Prestataires et partage</h2>
+<ul>
+  <li><strong>Supabase</strong> (hébergement de la base de données et de l'authentification, région <strong>eu-west-3 — Paris, France</strong>), qui agit pour notre compte.</li>
+  <li><strong>Google</strong> : connexion avec Google (si tu crées un compte) et publicité AdMob (voir § 4).</li>
+</ul>
+<p>Nous ne vendons pas tes données. Nous ne les partageons avec personne d'autre, sauf obligation légale.</p>
+<p>Toutes les communications entre l'application et ces services sont <strong>chiffrées</strong> (HTTPS).</p>
+
+<h2 id="conservation">6. Combien de temps ?</h2>
+<ul>
+  <li><strong>Sans compte</strong> : sur ton appareil, jusqu'à la désinstallation ou l'effacement des données de l'application.</li>
+  <li><strong>Compte</strong> : tant que ton compte existe. À sa suppression, toutes ses données sont effacées immédiatement (voir § 8).</li>
+  <li><strong>Publicité</strong> : selon les durées de conservation de Google.</li>
+</ul>
+
+<h2 id="droits">7. Tes droits</h2>
+<p>Conformément au RGPD, tu disposes d'un droit d'accès, de rectification, d'effacement, de portabilité, de limitation et d'opposition, ainsi que du droit de retirer ton consentement à tout moment (pour la publicité : Réglages → Publicité).</p>
+<ul>
+  <li><strong>Accès et portabilité</strong> : Réglages → Confidentialité → <strong>Télécharger mes données</strong> (compte requis).</li>
+  <li><strong>Rectification</strong> : écris-nous (par exemple pour changer de pseudo).</li>
+  <li><strong>Autres demandes</strong> : o.lasserre@gmail.com. Nous répondons sous un mois.</li>
+</ul>
+<p>Si tu estimes que tes droits ne sont pas respectés, tu peux adresser une réclamation à la <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">CNIL</a>.</p>
+
+<h2 id="suppression-du-compte">8. Supprimer ton compte et tes données</h2>
+<p>Cette section concerne l'application <strong>HexaLexique</strong> (<code>com.olasserre.hexalexique</code>), éditée par <strong>Olivier Lasserre</strong>.</p>
+<h3>Depuis l'application</h3>
+<ol>
+  <li>Ouvre HexaLexique et connecte-toi.</li>
+  <li>Va dans <strong>Profil → ⚙ Réglages</strong>.</li>
+  <li>Touche <strong>Supprimer mon compte</strong>, puis confirme.</li>
+</ol>
+<h3>Sans l'application</h3>
+<p>Envoie un e-mail à <strong>o.lasserre@gmail.com</strong> depuis l'adresse de ton compte Google, avec l'objet « Suppression de compte HexaLexique » et ton pseudo. La suppression est effectuée sous 30 jours et nous te le confirmons par e-mail.</p>
+<h3>Ce qui est supprimé</h3>
+<p>La suppression est <strong>définitive</strong> et porte sur <strong>toutes</strong> les données du compte : identifiants de connexion, pseudo, scores et entrées de classement, parties vérifiées, progression, collection de mots, badges, Défi du jour, amis, solde et objets Lexo, réglages de confidentialité.</p>
+<h3>Ce qui est conservé</h3>
+<p>Uniquement une trace technique minimale de la suppression (identifiant technique anonyme du compte et date), conservée comme preuve que la suppression a été effectuée. Elle ne contient ni e-mail, ni pseudo, ni donnée de jeu.</p>
+<p>Les données restées sur ton téléphone (mode sans compte, préférences) s'effacent en désinstallant l'application. Les données publicitaires sont gérées par Google (voir § 4).</p>
+
+<h2 id="permissions">9. Autorisations Android</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Autorisation</th><th>Utilisation</th></tr></thead>
+  <tbody>
+    <tr><td>Internet, état du réseau</td><td>Compte, classements, Défi du jour, publicité</td></tr>
+    <tr><td>Réglages audio, vibration</td><td>Sons, musique et retour haptique</td></tr>
+    <tr><td>Maintien de l'écran allumé (wake lock)</td><td>Éviter la mise en veille pendant une partie</td></tr>
+    <tr><td>Identifiant publicitaire (<code>AD_ID</code>, <code>ACCESS_ADSERVICES_*</code>)</td><td>Publicité Google AdMob (voir § 4)</td></tr>
+    <tr><td>Service de premier plan</td><td>Tâches techniques de la bibliothèque publicitaire de Google</td></tr>
+  </tbody>
+</table>
+</div>
+<p>HexaLexique n'accède ni au micro, ni à la caméra, ni à ta position précise, ni à tes contacts, photos ou fichiers.</p>
+
+<h2 id="age">10. Âge</h2>
+<p>HexaLexique s'adresse aux personnes de <strong>13 ans et plus</strong>. Il n'est pas destiné aux enfants de moins de 13 ans.</p>
+
+<h2 id="modifications">11. Modifications</h2>
+<p>Si nous modifions cette politique, la nouvelle version est publiée sur cette page avec sa date d'entrée en vigueur. En cas de changement important, nous t'en informons dans l'application ou par e-mail.</p>
+
+<h2 id="credits">12. Crédits et licences</h2>
+<ul>
+  <li><strong>Dictionnaire</strong> : dérivé de <em>an-array-of-french-words</em> 2.0.0 (Zeke Sikelianos, licence MIT), lui-même issu de la liste de mots Letterpress de Loren Brichter (domaine public, CC0 1.0).</li>
+  <li><strong>Polices</strong> : Playfair Display (Claus Eggers Sørensen) et Space Mono (Colophon), SIL Open Font License 1.1.</li>
+  <li><strong>Sons</strong> : <code>tile_appended_v1.wav</code>, <code>word_valid_confirmed_v1.wav</code> — CC0 (domaine public).</li>
+  <li><strong>Musique</strong> : « First Light Particles », Yoiyami (OpenGameArt.org) — CC0 (domaine public).</li>
+</ul>
+
+<h2 id="contact">13. Contact</h2>
+<p>Olivier Lasserre — <strong>o.lasserre@gmail.com</strong></p>
+
+</main>
 </body>
 </html>
